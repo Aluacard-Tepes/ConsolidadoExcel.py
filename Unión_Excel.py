@@ -27,5 +27,6 @@ excel_merged = pd.DataFrame()
 # Iterar a través de la lista de DataFrames y concatenarlos en el DataFrame consolidado
 for excel_file in excel_list:
     excel_merged = pd.concat([excel_merged, pd.DataFrame.from_records(excel_file)], ignore_index= False)
-    
+
+# Guardar el DataFrame consolidado en un archivo Excel
     excel_merged.to_excel("consolidated_file.xlsx")
